@@ -13,7 +13,7 @@ var Sandwich = (function(){
 			},
 
 			getTotal: function(){
-					return total;
+					return "$" + total.toString();
 			},
 
 			displaySandwich: function(){
@@ -24,22 +24,63 @@ var Sandwich = (function(){
 
 				var sandyString = ""
 
-				sandyString += "Your bread is " + Sandwich.getBread();
+				sandyString += "Your bread: " + Sandwich.getBread() + "<br>";
 
-				// sandyString += "Your meat is" + Sandwich.getMeat();
+				 sandyString += "Your meat(s):" + Sandwich.getMeat()+ "<br>";
 
-				// sandyString += "Your cheese is " + Sandwich.getCheese();
+				 sandyString += "Your cheese(s): " + Sandwich.getCheese() + "<br>";
 
-				// sandyString += "Your condiments are " + Sandwich.getCondiments();
+				 sandyString += "Your condiment(s): " + Sandwich.getCondiments() + "<br>";
 
-				// sandyString += "Your veggies are " + Sandwich.getVeggies();
+				 sandyString += "Your veggie(s): " + Sandwich.getVeggies() + "<br>";
+
+				 sandyString += "Total: " + Sandwich.getTotal();
 
 				theSandwich.innerHTML += sandyString;
 
-
 			}
-
 	 };
-
-
 })();
+
+
+document.getElementById('breadButton').addEventListener('click', function(){
+
+	var choice = document.getElementById('breads').value;
+	Sandwich.setBread(choice);
+	Sandwich.displaySandwich();
+
+});
+
+document.getElementById('meatButton').addEventListener('click', function(){
+
+	var choice = document.getElementById('meat').value;
+	Sandwich.addMeat(choice);
+	Sandwich.displaySandwich();
+
+});
+
+document.getElementById('cheeseButton').addEventListener('click', function(){
+
+	var choice = document.getElementById('cheese').value;
+	Sandwich.addCheese(choice);
+	Sandwich.displaySandwich();
+
+});
+
+document.getElementById('condiButton').addEventListener('click', function(){
+
+	var choice = document.getElementById('condiments').value;
+	Sandwich.addCondiments(choice);
+	Sandwich.displaySandwich();
+
+});
+
+document.getElementById('veggieButton').addEventListener('click', function(){
+
+	var choice = document.getElementById('veggies').value;
+	Sandwich.addVeggies(choice);
+	Sandwich.displaySandwich();
+
+});
+
+
