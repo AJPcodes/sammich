@@ -13,7 +13,7 @@ var Sandwich = (function(){
 			},
 
 			getTotal: function(){
-					return "$" + total.toString();
+					return "$" + total.toFixed(2);
 			},
 
 			displaySandwich: function(){
