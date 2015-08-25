@@ -25,6 +25,13 @@ Sandwich = (function(sandwich){
 
   	}
 
+      sandwich.removeCheese = function() {
+    Sandwich.updateTotal(-1 * cheese.length * .85);
+     cheese = [];
+
+  };
+
+
   	return sandwich
 
 })(Sandwich);
@@ -54,6 +61,10 @@ Sandwich = (function(sandwich){
 
   	}
 
+    sandwich.removeCondiments = function() {
+     condiments = [];
+   }
+
   	return sandwich
 
 })(Sandwich);
@@ -64,7 +75,7 @@ Sandwich = (function(sandwich){
 
 	sandwich.addVeggies = function(veggieschoice){
 			veggies.push(veggieschoice);
-			sandwich.updateTotal(.25);
+			sandwich.updateTotal(.50);
 	};
 
     sandwich.getVeggies = function() {
@@ -83,6 +94,14 @@ Sandwich = (function(sandwich){
   	 }
 
   	}
+
+    sandwich.removeVeggies = function() {
+
+     Sandwich.updateTotal(-1 * veggies.length * .50);
+
+     veggies = [];
+   }
+
 
   	return sandwich
 

@@ -33,6 +33,12 @@ Sandwich = (function(sandwich){
     }
   };
 
+  sandwich.removeMeat = function() {
+  	Sandwich.updateTotal(-1 * meat.length * 2);
+  	meat = [];
+
+  };
+
 	return sandwich;
 
 })(Sandwich);

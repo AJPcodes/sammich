@@ -43,6 +43,8 @@ var Sandwich = (function(){
 })();
 
 
+//addButtons
+
 document.getElementById('breadButton').addEventListener('click', function(){
 
 	var choice = document.getElementById('breads').value;
@@ -84,3 +86,37 @@ document.getElementById('veggieButton').addEventListener('click', function(){
 });
 
 
+//remove buttons
+
+
+document.getElementById('removeMeat').addEventListener('click', function(){
+
+	var choice = document.getElementById('meat').value;
+	Sandwich.removeMeat(choice);
+	Sandwich.displaySandwich();
+
+});
+
+document.getElementById('removeCheese').addEventListener('click', function(){
+
+	var choice = document.getElementById('cheese').value;
+	Sandwich.removeCheese(choice);
+	Sandwich.displaySandwich();
+
+});
+
+document.getElementById('removeCondi').addEventListener('click', function(){
+
+	var choice = document.getElementById('condiments').value;
+	Sandwich.removeCondiments(choice);
+	Sandwich.displaySandwich();
+
+});
+
+document.getElementById('removeVeggie').addEventListener('click', function(){
+
+	var choice = document.getElementById('veggies').value;
+	Sandwich.removeVeggies(choice);
+	Sandwich.displaySandwich();
+
+});
