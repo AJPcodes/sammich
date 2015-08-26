@@ -1,4 +1,3 @@
-// Cheese, condiments, veggie//
 Sandwich = (function(sandwich){
 
 	var cheese = [];
@@ -111,18 +110,5 @@ Sandwich = (function(sandwich){
 
 
 
-// Sandwich = (function(condiments){
 
-// 	var cheese = [];
-
-// 	condiments.addCondiments = function(condimentschoice){
-// 		condiments.push(condimentchoice);
-// 	};
-
-//   condiments.getCondiments = function() {
-//     return condiments;
-//   };
-
-
-// })(Sandwich);
 
